@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>شومان Pharmacy | جمالك وصحتك في أمان</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>شومان</span>
+                <small>PHARMACY</small>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#skin">Skin Care</a></li>
+                <li><a href="#hair">Hair Care</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+
+            <button class="cart-btn" onclick="showCart()">
+                🛒 السلة <span id="cart-count">0</span>
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <p class="small-title">SHAMAN PHARMACY</p>
+
+            <h1>
+                جمالك وصحتك
+                <span>في أمان</span>
+            </h1>
+
+            <p>
+                نهتم بصحتك وجمالك من خلال منتجات مختارة
+                بعناية ونصائح مبنية على المعرفة الطبية.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#products" class="main-btn">اكتشف منتجاتنا</a>
+                <a href="#contact" class="second-btn">تواصل معنا</a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+            <div class="medical-icon">⚕</div>
+            <h2>صحتك أولاً</h2>
+            <p>اختيارات أفضل لحياة أفضل</p>
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="feature">
+            <div>💊</div>
+            <h3>منتجات موثوقة</h3>
+            <p>منتجات مختارة بعناية</p>
+        </div>
+
+        <div class="feature">
+            <div>🧑‍⚕️</div>
+            <h3>نصيحة متخصصة</h3>
+            <p>معلومات تساعدك على الاختيار</p>
+        </div>
+
+        <div class="feature">
+            <div>❤️</div>
+            <h3>نهتم بك</h3>
+            <p>صحتك وجمالك أولويتنا</p>
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+    <section class="section" id="products">
+
+        <div class="section-title">
+            <p>OUR PRODUCTS</p>
+            <h2>منتجاتنا</h2>
+            <span>اختيارات مميزة لصحتك وجمالك</span>
+        </div>
+
+        <div class="products-container">
+
+            <div class="product-card">
+
+                <div class="product-image">🧴</div>
+
+                <div class="product-info">
+                    <span class="category">Skin Care</span>
+
+                    <h3>Face Cleanser</h3>
+
+                    <p>
+                        منظف لطيف للبشرة للاستخدام اليومي.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>250 ج.م</strong>
+
+                        <button onclick="addToCart('Face Cleanser')">
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">🧴</div>
+
+                <div class="product-info">
+                    <span class="category">Hair Care</span>
+
+                    <h3>Hair Shampoo</h3>
+
+                    <p>
+                        شامبو للعناية بالشعر وتنظيف فروة الرأس.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>300 ج.م</strong>
+
+                        <button onclick="addToCart('Hair Shampoo')">
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">💧</div>
+
+                <div class="product-info">
+                    <span class="category">Skin Care</span>
+
+                    <h3>Moisturizer</h3>
+
+                    <p>
+                        مرطب يساعد على الحفاظ على ترطيب البشرة.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>280 ج.م</strong>
+
+                        <button onclick="addToCart('Moisturizer')">
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">💆</div>
+
+                <div class="product-info">
+                    <span class="category">Hair Care</span>
+
+                    <h3>Hair Serum</h3>
+
+                    <p>
+                        سيروم للعناية بمظهر الشعر وترطيبه.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>350 ج.م</strong>
+
+                        <button onclick="addToCart('Hair Serum')">
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skin Care -->
+    <section class="category-section" id="skin">
+
+        <div>
+            <p class="category-title">SKIN CARE</p>
+
+            <h2>
+                عناية علمية
+                <span>ببشرتك</span>
+            </h2>
+
+            <p>
+                لأن كل بشرة لها احتياجات مختلفة،
+                نساعدك في اختيار المنتجات المناسبة
+                لروتين العناية الخاص بك.
+            </p>
+
+            <a href="#products" class="main-btn">
+                اكتشف منتجات البشرة
+            </a>
+        </div>
+
+        <div class="science-box">
+            <div>🧬</div>
+            <h3>Skin Science</h3>
+            <p>Cleanse • Hydrate • Protect</p>
+        </div>
+
+    </section>
+
+
+    <!-- Hair Care -->
+    <section class="category-section reverse" id="hair">
+
+        <div>
+            <p class="category-title">HAIR CARE</p>
+
+            <h2>
+                صحة شعرك
+                <span>تبدأ من العناية</span>
+            </h2>
+
+            <p>
+                اختيارات مناسبة للعناية بالشعر
+                وفروة الرأس مع الاهتمام بالمكونات
+                وطريقة الاستخدام.
+            </p>
+
+            <a href="#products" class="main-btn">
+                اكتشف منتجات الشعر
+            </a>
+        </div>
+
+        <div class="science-box">
+            <div>🔬</div>
+            <h3>Hair Science</h3>
+            <p>Care • Strength • Shine</p>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="section-title">
+            <p>ABOUT SHAMAN</p>
+            <h2>من نحن؟</h2>
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-logo">
+                شومان
+                <small>PHARMACY</small>
+            </div>
+
+            <div>
+                <h3>أكثر من مجرد صيدلية</h3>
+
+                <p>
+                    في شومان نهتم بأن يحصل كل شخص على
+                    المعلومة الصحيحة والمنتج المناسب.
+                    هدفنا الجمع بين الرعاية الصحية
+                    والعناية بالجمال في مكان واحد.
+                </p>
+
+                <p>
+                    <strong>جمالك وصحتك في أمان.</strong>
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+            <p>CONTACT US</p>
+            <h2>تواصل معنا</h2>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>شومان</h3>
+
+                <p>📍 العنوان: المنصورة - مصر</p>
+
+                <p>📞 الهاتف: 01000000000</p>
+
+                <p>📧 البريد: info@shamanpharmacy.com</p>
+
+                <p>⏰ يومياً: 9 صباحاً - 12 مساءً</p>
+
+            </div>
+
+
+            <form onsubmit="sendMessage(event)">
+
+                <input type="text" placeholder="اسمك" required>
+
+                <input type="email" placeholder="البريد الإلكتروني" required>
+
+                <textarea placeholder="اكتب رسالتك هنا..." required></textarea>
+
+                <button type="submit" class="main-btn">
+                    إرسال الرسالة
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            شومان Pharmacy
+        </div>
+
+        <p>
+            جمالك وصحتك في أمان ❤️
+        </p>
+
+        <p class="copyright">
+            © 2026 Shaman Pharmacy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
